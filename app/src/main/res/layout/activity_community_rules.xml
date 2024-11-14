@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityRulesActivity">
+
+    <!-- LinearLayout to hold all content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back button and title section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Back button -->
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:contentDescription="Back" />
+
+            <!-- Title Text -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Community Rules"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp" />
+
+        </LinearLayout>
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/rules_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMMUNITY RULES"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <!-- Rules Content -->
+        <TextView
+            android:id="@+id/rules_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We want to build a friendly and positive community here at GearUp! That's why we have come up with Community Rules as a guideline for all buyers and sellers in order to preserve this safe environment to shop and sell on-the-go. Go through this outline for the Do's and Dont's when using our mobile marketplace! By using GearUp, you agree to our Terms of Service here. We are committed to keeping our community safe with everybody's effort."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Do's Title -->
+        <TextView
+            android:id="@+id/dos_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Do's"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <!-- Dotted Line (Divider) -->
+        <View
+            android:id="@+id/dotted_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/dotted_line" /> <!-- Custom dotted line -->
+
+        <!-- Section 1 -->
+        <TextView
+            android:id="@+id/rules_section_1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Sell, not advertise"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GearUp is designed as a venue to assist transactions between buyers and sellers - not a platform for advertisements. You should only list products that you are intending to sell on GearUp."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here are some examples of advertising:"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Adding a link on your product page that leads to a separate website."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Any text in your product description and/or photos informing buyers to reach you via other platforms such as Whatsapp or Facebook. (We understand the need for buyers and sellers to communicate with one another. The Chat Now function in GearUp provides an easy way for both parties to connect!)"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rules_section_2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. How to make your listing shine"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No buyer will be interested in a listing that has poor quality photos. Flaunt your photography skills and create some quality shots - check out GearUp tips here. Aside from that, be honest! Give your product an accurate and detailed description. Nobody likes a nasty surprise when it comes to purchasing something. Being truthful will increase your chances of obtaining positive ratings and reviews from your buyers!"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rules_section_3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Be respectful"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We want to foster a safe environment for people to enjoy the pleasure of mobile shopping. Keep your content clean and suitable for everyone - this means no vulgar language, hate messages or spam etc. As a community in GearUp, we urge all users to treat each other with kindness and respect. Whether you're a buyer or seller, follow the guidelines here to ensure smooth transactions for everyone!"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/donts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Dont's"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/dotted_line2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/dotted_line" />
+
+        <TextView
+            android:id="@+id/rules_section_4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Infringing content and impersonation"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any deceptive manner of impersonation is a serious offence in GearUp. If you choose to use someone else's photo, respect their rights and give credit where it's due."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here are some examples of infringing content and impersonation:"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Collecting and using others' personal data without their consent (i.e. contact details, photos...)."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Using someone's identity as your own for credibility purposes."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help us keep the GearUp community strong! If you find any user impersonating you or someone else, please contact us here."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rules_section_5_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Counterfeit and imitation products"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only genuine products can be listed on GearUp. Please be aware that counterfeit products are illegal and strictly prohibited in Singapore. GearUp reserves the right to report and delete any listing of a counterfeit nature."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rules_section_6_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Posting services"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GearUp does not allow users to list their services on the platform."
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/rules_section_7_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Return policy"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sellers are allowed to set their own return policy as long as it does not contradict with the existing version set by GearUp."
+            android:textSize="16sp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="8dp" />
+
+
+        <View
+            android:id="@+id/dotted_line3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/dotted_line" />
+
+        <!-- Footer content -->
+        <TextView
+            android:id="@+id/footer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We all have a part to play in keeping the community safe. GearUp is an open environment for everyone to use as a platform to buy and sell on-the-go. Respect one another and let's make this the best community for mobile shopping. If you spot any user breaching any of these rules, you can alert the GearUp team by reporting the user or product here. Kindly note that this does not guarantee the removal of the user or product as it will still be subject to GearUp's discretion."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your feedback is of utmost importance to us and we would love to hear from you! Contact us here with any enquiries or suggestions you may have for us to make the best possible user experience for mobile shopping."
+            android:textSize="16sp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brought to you by your friendly team from"
+            android:textSize="16sp"
+            android:textColor="#808080"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/automotive"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:contentDescription="GearUp Logo" />
+
+    </LinearLayout>
+</ScrollView>

@@ -11,6 +11,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +21,7 @@ public class BuyerRegister extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
-    private EditText firstNameEditText, lastNameEditText, mobileNumberEditText, emailEditText, passwordEditText, confirmPasswordEditText;
+    private EditText firstNameEditText, lastNameEditText, mobileNumberEditText, addressEditText, emailEditText, passwordEditText, confirmPasswordEditText;
     private Button signupButton;
 
     @Override
@@ -33,6 +35,7 @@ public class BuyerRegister extends AppCompatActivity {
         firstNameEditText = findViewById(R.id.etfn);
         lastNameEditText = findViewById(R.id.etln);
         mobileNumberEditText = findViewById(R.id.etemobileno);
+        addressEditText = findViewById(R.id.etaddress);
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         confirmPasswordEditText = findViewById(R.id.cpassword);
@@ -45,12 +48,13 @@ public class BuyerRegister extends AppCompatActivity {
         String firstName = firstNameEditText.getText().toString().trim();
         String lastName = lastNameEditText.getText().toString().trim();
         String mobileNumber = mobileNumberEditText.getText().toString().trim();
+        String address = addressEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
         // Check for empty fields
-        if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(lastName) || TextUtils.isEmpty(mobileNumber) ||
+        if (TextUtils.isEmpty(firstName) || TextUtils.isEmpty(lastName) || TextUtils.isEmpty(mobileNumber) || TextUtils.isEmpty(address) ||
                 TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmPassword)) {
             Toast.makeText(BuyerRegister.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
             return;
@@ -74,7 +78,7 @@ public class BuyerRegister extends AppCompatActivity {
                     .addOnCompleteListener(this, task -> {
                         signupButton.setEnabled(true); // Re-enable button
                         if (task.isSuccessful()) {
-                            saveUserInformation(firstName, lastName, mobileNumber, email);
+                            saveUserInformation(firstName, lastName, mobileNumber, address, email);
                         } else {
                             Toast.makeText(BuyerRegister.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -84,13 +88,20 @@ public class BuyerRegister extends AppCompatActivity {
         }
     }
 
-    private void saveUserInformation(String firstName, String lastName, String mobileNumber, String email) {
+    private void saveUserInformation(String firstName, String lastName, String mobileNumber, String address, String email) {
         Map<String, Object> user = new HashMap<>();
         user.put("firstName", firstName);
         user.put("lastName", lastName);
         user.put("mobileNumber", mobileNumber);
         user.put("email", email);
         user.put("role", "buyer");
+
+        Map<String, Object> addressMap = new HashMap<>();
+        addressMap.put("fullName", firstName + " " + lastName);
+        addressMap.put("mobileNumber", mobileNumber);
+        addressMap.put("address", address);
+
+        user.put("addresses", Collections.singletonList(addressMap)); // Store address as a list
 
         db.collection("buyers").document(mAuth.getCurrentUser().getUid())
                 .set(user)
@@ -103,6 +114,7 @@ public class BuyerRegister extends AppCompatActivity {
                     }
                 });
     }
+
 
     private void navigateToLogin() {
         Intent intent = new Intent(BuyerRegister.this, Login.class);

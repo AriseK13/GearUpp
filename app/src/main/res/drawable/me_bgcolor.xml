@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Shadow effect -->
+            <item>
+                <shape>
+                    <solid android:color="#40000000" /> <!-- Semi-transparent black shadow -->
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <!-- Button shape -->
+            <item android:top="4dp" android:left="4dp"> <!-- Offset shadow to create 3D effect -->
+                <shape>
+                    <solid android:color="#0288D1"/> <!-- Darker blue when pressed -->
+                    <corners android:radius="12dp"/>
+                    <stroke android:width="2dp" android:color="#01579B"/> <!-- Darker blue border -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <layer-list>
+            <!-- Shadow effect -->
+            <item>
+                <shape>
+                    <solid android:color="#40000000" /> <!-- Semi-transparent black shadow -->
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <!-- Button shape -->
+            <item android:top="4dp" android:left="4dp"> <!-- Offset shadow -->
+                <shape>
+                    <solid android:color="#81D4FA"/> <!-- Sky blue color as default -->
+                    <corners android:radius="12dp"/>
+                    <stroke android:width="2dp" android:color="#0288D1"/> <!-- Darker blue border -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

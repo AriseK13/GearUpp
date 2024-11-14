@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/accountbutton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Account and Security"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/profile_btn"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="20dp"
+            android:paddingStart="20dp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/baseline_manage_accounts_24"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addressesbutton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="My Addresses"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_btn"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="20dp"
+            android:paddingStart="20dp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/baseline_add_location_alt_24"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/notificationbutton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Notification Settings"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_btn"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="20dp"
+            android:paddingStart="20dp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/baseline_circle_notifications_24"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rulesbutton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Community Rules"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/profile_btn"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="20dp"
+            android:paddingStart="20dp"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/baseline_check_circle_24"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

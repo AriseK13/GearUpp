@@ -55,6 +55,28 @@ public class MeFragmentSeller extends Fragment {
             logoutUser();
         });
 
+        // Handle settings button click
+        view.findViewById(R.id.settingbutton).setOnClickListener(v -> {
+            // Replace the current fragment with SettingsFragment
+            Fragment settingsFragment = new SettingsFragment();
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, settingsFragment) // The container where your fragments are displayed
+                    .addToBackStack(null) // Optional, if you want to allow back navigation
+                    .commit();
+        });
+
+        // Handle editprofile button click
+        view.findViewById(R.id.editbutton).setOnClickListener(v -> {
+            // Create an instance of EditProfileBuyerFragment
+            Fragment editProfileBuyerFragment = new EditProfileBuyerFragment();
+
+            // Replace the current fragment with EditProfileBuyerFragment
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, editProfileBuyerFragment) // The container where your fragments are displayed
+                    .addToBackStack(null) // Optional, to allow back navigation
+                    .commit();
+        });
+
         return view;
     }
 

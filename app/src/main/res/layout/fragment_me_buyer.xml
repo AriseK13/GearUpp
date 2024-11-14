@@ -29,11 +29,13 @@
                     app:srcCompat="@drawable/me"
                     tools:ignore="MissingConstraints" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/uploadButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Upload"
+                    android:background="@drawable/me_bgcolor"
                     android:layout_gravity="center"
                     app:layout_constraintEnd_toEndOf="@+id/profileImageView"
                     app:layout_constraintStart_toStartOf="@+id/profileImageView"
