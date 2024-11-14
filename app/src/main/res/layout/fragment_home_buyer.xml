@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/platitum"
     tools:context=".HomeFragmentBuyer">
 
     <LinearLayout
@@ -12,62 +13,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@android:color/white"
+        android:padding="12dp"
+        android:background="@drawable/viewpager_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp">
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/search_bar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="277dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            android:hint="Search Product"
-            android:layout_marginTop="5dp"
+            android:background="@drawable/search_bar_background"
             android:drawableStart="@drawable/search"
             android:drawablePadding="8dp"
-            android:padding="8dp"
-            android:background="@drawable/search_bar_background"
+            android:hint="Search Product"
+            android:imeOptions="actionSearch"
             android:inputType="text"
-            android:imeOptions="actionSearch"/>
+            android:paddingHorizontal="12dp"
+            android:textColor="@android:color/black" />
 
         <ImageView
             android:id="@+id/icon_cart"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
             android:src="@drawable/addtocart"
-            android:contentDescription="Add to Cart"/>
+            android:contentDescription="Add to Cart" />
 
         <ImageView
             android:id="@+id/icon_message"
-            android:layout_width="30dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="13dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="12dp"
             android:src="@drawable/messenger"
-            android:contentDescription="Messages"/>
+            android:contentDescription="Messages" />
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/top_bar"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <!-- Central Components -->
+            <!-- Central Components Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="16dp">
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/label_central_components"
@@ -75,29 +79,35 @@
                     android:layout_height="wrap_content"
                     android:text="Central Components"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/text_see_all_central"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
-                    android:textColor="@color/colorAccent"
-                    android:layout_gravity="end"/>
+                    android:textColor="@color/grey"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager_central_components"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/viewpager_background"/>
+                android:layout_height="300dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/viewpager_background_rounded" />
 
-            <!-- Body -->
+            <!-- Body Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="16dp">
+                android:gravity="center_vertical"
+                android:layout_marginVertical="16dp">
 
                 <TextView
                     android:id="@+id/label_body"
@@ -105,29 +115,35 @@
                     android:layout_height="wrap_content"
                     android:text="Body"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/text_see_all_body"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
-                    android:textColor="@color/colorAccent"
-                    android:layout_gravity="end"/>
+                    android:textColor="@color/grey"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager_body"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/viewpager_background"/>
+                android:layout_height="300dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/viewpager_background_rounded" />
 
-            <!-- Connectors -->
+            <!-- Connectors Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="16dp">
+                android:gravity="center_vertical"
+                android:layout_marginVertical="16dp">
 
                 <TextView
                     android:id="@+id/label_connectors"
@@ -135,29 +151,35 @@
                     android:layout_height="wrap_content"
                     android:text="Connectors"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/text_see_all_connectors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
-                    android:textColor="@color/colorAccent"
-                    android:layout_gravity="end"/>
+                    android:textColor="@color/grey"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager_connectors"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/viewpager_background"/>
+                android:layout_height="300dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/viewpager_background_rounded" />
 
-            <!-- Peripherals -->
+            <!-- Peripherals Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="16dp">
+                android:gravity="center_vertical"
+                android:layout_marginVertical="16dp">
 
                 <TextView
                     android:id="@+id/label_peripherals"
@@ -165,24 +187,27 @@
                     android:layout_height="wrap_content"
                     android:text="Peripherals"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/text_see_all_peripherals"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
-                    android:textColor="@color/colorAccent"
-                    android:layout_gravity="end"/>
+                    android:textColor="@color/grey"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager_peripherals"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/viewpager_background"/>
-
+                android:layout_height="300dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/viewpager_background_rounded" />
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

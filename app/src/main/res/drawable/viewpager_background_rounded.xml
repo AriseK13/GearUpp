@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- res/drawable/viewpager_background_rounded.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/lightgrey" /> <!-- Change color as needed -->
+    <solid android:color="@color/almond" /> <!-- Change color as needed -->
     <corners android:radius="16dp" /> <!-- Adjust radius for the level of roundness -->
     <padding
-        android:left="10dp"
-        android:top="6dp"
-        android:right="10dp"
-        android:bottom="6dp" />
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
     <stroke
         android:width="2dp"
         android:color="#BDBDBD" /> <!-- Optional: border color -->
